@@ -10,8 +10,8 @@ Time spent: 5 hours spent in total
 
 The following **required** functionality is completed:
 
-* [ ] Ability to query the Yelp API to get results from a search query
-* [ ] The search results are displayed in a RecyclerView
+* [ ] Adjusted UI to resemble more of the Yelp official UI
+* [ ] The search results are displayed with custom-appearing features
 
 The following **extensions** are implemented:
 
