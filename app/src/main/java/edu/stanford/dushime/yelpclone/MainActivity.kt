@@ -4,11 +4,15 @@ import android.app.TaskStackBuilder.create
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.security.identity.AccessControlProfileId
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
+import android.widget.EditText
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
+import org.w3c.dom.Text
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -23,12 +27,15 @@ private const val API_KEY = "GvWDvb7dQb1to8u3DCMsvQYUgG4mFy72fTLdJqJ1K5Ei_DIYdyB
 class MainActivity : AppCompatActivity() {
     private lateinit var rvRestaurants : RecyclerView
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         rvRestaurants = findViewById(R.id.rvRestaurants)
 
 
+
+        //if (tvQuery.text.toString() != null) query = tvQuery.text.toString()
         val restaurants = mutableListOf<YelpRestaurant>()
         val adapter = RestaurantsAdapter(this, restaurants)
         rvRestaurants.adapter = adapter
@@ -55,8 +62,6 @@ class MainActivity : AppCompatActivity() {
             override fun onFailure(call: Call<YelpSearchResult>, t: Throwable) {
                 Log.i(TAG, "onFailure $t")
             }
-
-
         })
     }
 }

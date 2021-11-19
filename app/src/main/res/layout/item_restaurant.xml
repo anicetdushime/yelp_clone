@@ -34,11 +34,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:numStars="5"
+        android:progressTint="#F44336"
         android:rating="4.5"
         android:stepSize="0.5"
         app:layout_constraintBottom_toBottomOf="@+id/tvNumReviews"
         app:layout_constraintStart_toStartOf="@+id/tvName"
-        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tvNumReviews"
