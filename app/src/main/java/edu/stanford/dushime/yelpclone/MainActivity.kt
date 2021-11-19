@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
 
 
         //if (tvQuery.text.toString() != null) query = tvQuery.text.toString()
+        var query : String = "Avocado Toast"
         val restaurants = mutableListOf<YelpRestaurant>()
         val adapter = RestaurantsAdapter(this, restaurants)
         rvRestaurants.adapter = adapter
